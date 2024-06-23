@@ -22,7 +22,7 @@ class ProjectsSection extends StatelessWidget {
           childAspectRatio = 1.2;
         } else {
           crossAxisCount = 1;
-          childAspectRatio = 3;
+          childAspectRatio = 1.5;
         }
 
         return Column(

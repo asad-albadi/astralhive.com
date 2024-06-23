@@ -24,7 +24,7 @@ class TestimonialsSection extends StatelessWidget {
             childAspectRatio = 1.2;
           } else {
             crossAxisCount = 1;
-            childAspectRatio = 3;
+            childAspectRatio = 2.4;
           }
 
           return Column(

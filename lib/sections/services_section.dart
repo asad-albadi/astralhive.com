@@ -23,7 +23,7 @@ class ServicesSection extends StatelessWidget {
           childAspectRatio = 1.2;
         } else {
           crossAxisCount = 1;
-          childAspectRatio = 3;
+          childAspectRatio = 2;
         }
 
         return Column(
