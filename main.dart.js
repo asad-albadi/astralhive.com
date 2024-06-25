@@ -40784,7 +40784,7 @@ A.TY.prototype={
 $0(){A.rA("https://linktr.ee/astralhive")},
 $S:0}
 A.E4.prototype={
-N(a){return A.jm(A.a([A.ajx(u.z,B.bV,null,200),B.df,A.ei("Welcome to Astral Hive Solutions",A.aY(a).p3.e,B.P),B.aV,A.ei("We develop Windows, Linux, Android, and Web Apps.",A.aY(a).p3.w,B.P)],t.F),B.a8,B.as)}}
+N(a){return A.jm(A.a([A.ajx(u.z,B.bV,null,200),B.df,A.ei("Welcome to Astral Hive",A.aY(a).p3.e,B.P),B.aV,A.ei("Creating high-performance applications for Windows, Linux, Android, and the web, along with comprehensive automation solutions.",A.aY(a).p3.w,B.P)],t.F),B.a8,B.as)}}
 A.E7.prototype={
 N(a){return new A.iB(new A.Xq(),null)}}
 A.Xq.prototype={
@@ -40793,7 +40793,7 @@ if(p>1200)s=4
 else if(p>800)s=3
 else s=p>600?2:1
 r=A.ei("Our Highlights",A.aY(a).p3.f,B.P)
-return A.jm(A.a([r,B.aV,A.ei("Proud of a portfolio of successful projects crafted with the highest standards of quality and performance. From enterprise-level applications to consumer-facing apps, covering a wide range of industries and use cases. Astral Hive Solutions offers the benefits of direct communication, agile development, and a deep commitment to project success.",A.nF(q,q,B.b4,q,q,q,q,q,q,q,q,p>600?18:16,q,q,q,q,q,!0,q,q,q,q,q,q,q,q),B.P),B.df,A.adb(s,16,new A.Xp(),3,16,B.eg,!0)],t.F),B.a8,B.as)},
+return A.jm(A.a([r,B.aV,A.ei("The portfolio features successful projects crafted with the highest standards of quality and performance, spanning various industries and use cases. Benefits include direct communication, agile development, and a strong commitment to project success.",A.nF(q,q,B.b4,q,q,q,q,q,q,q,q,p>600?18:16,q,q,q,q,q,!0,q,q,q,q,q,q,q,q),B.P),B.df,A.adb(s,16,new A.Xp(),3,16,B.eg,!0)],t.F),B.a8,B.as)},
 $S:47}
 A.Xp.prototype={
 $2(a,b){return[B.Br,B.Bp,B.Bn][b]},
@@ -40802,7 +40802,7 @@ A.Es.prototype={
 N(a){return new A.iB(new A.Yp(),null)}}
 A.Yp.prototype={
 $2(a,b){var s=null,r=b.b>600?18:16
-return A.jm(A.a([A.ei("About Us",A.aY(a).p3.f,B.P),B.aV,A.ei("Astral Hive Solutions combines the expertise and dedication of a solo developer with the professionalism and reliability of a full-scale tech company. Committed to delivering high-quality, innovative, and reliable digital products tailored to client needs, with extensive experience in developing high-performance applications for Windows, Linux, Android, and the web. Each project receives personalized attention and care.",A.nF(s,s,B.b4,s,s,s,s,s,s,s,s,r,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.P)],t.F),B.a8,B.as)},
+return A.jm(A.a([A.ei("About Us",A.aY(a).p3.f,B.P),B.aV,A.ei("Astral Hive delivers high-quality, innovative, and reliable digital products tailored to client needs. Extensive experience ensures each project receives personalized attention and care.",A.nF(s,s,B.b4,s,s,s,s,s,s,s,s,r,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.P)],t.F),B.a8,B.as)},
 $S:47}
 A.Gt.prototype={
 N(a){return new A.iB(new A.a0n(),null)}}
