@@ -1,6 +1,7 @@
 import 'package:astralhive_website/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class ServicesSection extends StatelessWidget {
   const ServicesSection({super.key});
@@ -10,20 +11,15 @@ class ServicesSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         int crossAxisCount;
-        double childAspectRatio;
 
         if (constraints.maxWidth > 1200) {
           crossAxisCount = 4;
-          childAspectRatio = 1.0;
         } else if (constraints.maxWidth > 800) {
           crossAxisCount = 3;
-          childAspectRatio = 1.1;
         } else if (constraints.maxWidth > 600) {
           crossAxisCount = 2;
-          childAspectRatio = 1.2;
         } else {
           crossAxisCount = 1;
-          childAspectRatio = 2;
         }
 
         return Column(
@@ -35,33 +31,38 @@ class ServicesSection extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
-            GridView.count(
+            AlignedGridView.count(
               crossAxisCount: crossAxisCount,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
-              childAspectRatio: childAspectRatio,
+              itemCount: 3, // Adjust this count to reflect your number of items
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              children: const [
-                CustomCard(
-                  icon: FontAwesomeIcons.laptopCode,
-                  title: 'Cross-Platform Apps',
-                  description:
-                      'High-performance applications for Windows, Linux, Android, and the web.',
-                ),
-                CustomCard(
-                  icon: FontAwesomeIcons.gear,
-                  title: 'Automation',
-                  description:
-                      'Streamline your processes with custom automation solutions.',
-                ),
-                CustomCard(
-                  icon: FontAwesomeIcons.networkWired,
-                  title: 'Comprehensive Systems',
-                  description:
-                      'Comprehensive solutions for PoS, management systems, and other integrated services.',
-                ),
-              ],
+              itemBuilder: (context, index) {
+                // Define the list of cards you want to display
+                final cards = [
+                  const CustomCard(
+                    icon: FontAwesomeIcons.laptopCode,
+                    title: 'Cross-Platform Apps',
+                    description:
+                        'High-performance applications for Windows, Linux, Android, and the web.',
+                  ),
+                  const CustomCard(
+                    icon: FontAwesomeIcons.gear,
+                    title: 'Automation',
+                    description:
+                        'Streamline your processes with custom automation solutions.',
+                  ),
+                  const CustomCard(
+                    icon: FontAwesomeIcons.networkWired,
+                    title: 'Comprehensive Systems',
+                    description:
+                        'Comprehensive solutions for PoS, management systems, and other integrated services.',
+                  ),
+                ];
+
+                return cards[index];
+              },
             ),
           ],
         );
