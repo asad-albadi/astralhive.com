@@ -16,11 +16,6 @@ flutter build web --release --no-tree-shake-icons
 # Check if the build was successful
 if [ $? -eq 0 ]; then
   echo "Build successful. Moving files to production directory."
-  
-  # Create the target directory if it does not exist
-  if [ ! -d "$TARGET_DIR" ]; then
-    mkdir -p "$TARGET_DIR"
-  fi
 
   # Remove existing contents in the target directory except CNAME
   find $TARGET_DIR -type f ! -name 'CNAME' -delete
