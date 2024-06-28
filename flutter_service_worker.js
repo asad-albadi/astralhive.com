@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"assets/fonts/MaterialIcons-Regular.otf": "1e1562038a6f09cdf790381b7f4cb357",
+const RESOURCES = {"assets/fonts/MaterialIcons-Regular.otf": "e7069dfd19b331be16bed984668fe080",
 "assets/assets/fonts/Source_Code_Pro/SourceCodePro-Italic-VariableFont_wght.ttf": "59b5238c0c1acf946ebea93fc3862987",
 "assets/assets/fonts/Source_Code_Pro/SourceCodePro-VariableFont_wght.ttf": "2eabf19db936c3a7603eaa08dce63e6b",
 "assets/assets/fonts/Source_Code_Pro.zip": "2ed146793b70ab3af0b7b7be8dc11e37",
@@ -26,8 +26,8 @@ const RESOURCES = {"assets/fonts/MaterialIcons-Regular.otf": "1e1562038a6f09cdf7
 "assets/AssetManifest.json": "90025b81d9e8d9c66e7c80b04252981f",
 "assets/FontManifest.json": "ec83ad2f303bd74a13f1ce30121e5127",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "f3307f62ddff94d2cd8b103daf8d1b0f",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "b816a2f7745b89d1b9f0b3fb805995c2",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "57790e3032459af622e5a62a57b04140",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "17ee8e30dde24e349e70ffcdc0073fb0",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "04f83c01dded195a11d21c2edf643455",
 "main.dart.js": "e035a28b8be6d4561191ba738311e712",
 "favicon.png": "1b27e4fe4019f734f2f5013cd20b28a5",
 "version.json": "748370cd5686f1847b322d2026337cc3",
@@ -42,9 +42,9 @@ const RESOURCES = {"assets/fonts/MaterialIcons-Regular.otf": "1e1562038a6f09cdf7
 "canvaskit/chromium/canvaskit.js.symbols": "ee7e331f7f5bbf5ec937737542112372",
 "canvaskit/canvaskit.js.symbols": "74a84c23f5ada42fe063514c587968c6",
 "canvaskit/skwasm.wasm": "4051bfc27ba29bf420d17aa0c3a98bce",
-"index.html": "dd430b22e9c67c8887bf03af021e000b",
-"/": "dd430b22e9c67c8887bf03af021e000b",
-"flutter_bootstrap.js": "63d79cb85289984f794cba2613045c25",
+"index.html": "f4bdfd6722dc749f70b977c9560c9875",
+"/": "f4bdfd6722dc749f70b977c9560c9875",
+"flutter_bootstrap.js": "a31fa6cd82ec9a758898a322a5985a86",
 "flutter.js": "383e55f7f3cce5be08fcf1f3881f585c",
 "icons/Icon-maskable-512.png": "eb17f3049741d51356ef7982c84858c5",
 "icons/Icon-512.png": "eb17f3049741d51356ef7982c84858c5",
