@@ -36,10 +36,13 @@ if [ $? -eq 0 ]; then
 
   # Check if the target directory is a git repository
   if [ -d ".git" ]; then
+    # Switch to the prod branch
+    git checkout prod
+
     # Commit the changes to the repository
     git add .
     git commit -m "$1"
-    git push
+    git push origin prod
 
     echo "Changes committed and pushed to the repository."
   else
