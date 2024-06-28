@@ -25,7 +25,7 @@ class ServicesSection extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            SelectableText(
               'Our Services',
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,

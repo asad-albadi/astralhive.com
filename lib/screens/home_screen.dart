@@ -68,11 +68,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                 const SizedBox(height: 48),
                                 const ContactSection(),
                                 const SizedBox(height: 48),
+                                const FooterSection(),
                               ],
                             ),
                           ),
                         ),
-                        const FooterSection(),
                       ],
                     ),
                   ),
@@ -92,16 +92,15 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: AppBar(
-              elevation: 0,
               title: Row(
                 children: [
                   SvgPicture.asset(
-                    'assets/vectors/code.svg', // Path to your SVG logo
+                    'assets/vectors/astralhive_logo_semi_trans.svg', // Path to your SVG logo
                     height: 50,
                     color: foregroundColor,
                   ),
                   const SizedBox(width: 8),
-                  const Text('Astral Hive Solutions'),
+                  const SelectableText('Astral Hive Solutions'),
                 ],
               ),
               backgroundColor: backgroundColor,

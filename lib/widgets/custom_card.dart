@@ -22,6 +22,7 @@ class CustomCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Card(
+          elevation: 10,
           color: backgroundColor2,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
@@ -48,7 +49,7 @@ class CustomCard extends StatelessWidget {
                     ),
                   ),
                 const SizedBox(height: 8),
-                Text(
+                SelectableText(
                   title,
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         fontWeight: FontWeight.bold,
@@ -56,7 +57,7 @@ class CustomCard extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 8),
-                Text(
+                SelectableText(
                   description,
                   style: Theme.of(context).textTheme.bodyMedium,
                   textAlign: TextAlign.center,

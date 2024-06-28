@@ -11,20 +11,19 @@ class HeaderSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SvgPicture.asset(
-          'assets/vectors/code.svg', // Path to your SVG logo
-          height: 200,
+          'assets/vectors/astralhive_logo_semi_trans.svg', // Path to your SVG logo
           width: 200,
           color: primaryColor,
         ),
         const SizedBox(height: 16),
-        Text(
-          'Welcome to Astral Hive Solutions',
+        SelectableText(
+          'Welcome to Astral Hive',
           style: Theme.of(context).textTheme.headlineMedium,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 8),
-        Text(
-          'We develop Windows, Linux, Android, and Web Apps.',
+        SelectableText(
+          'Creating high-performance applications for Windows, Linux, Android, and the web, along with comprehensive automation solutions.',
           style: Theme.of(context).textTheme.titleMedium,
           textAlign: TextAlign.center,
         ),

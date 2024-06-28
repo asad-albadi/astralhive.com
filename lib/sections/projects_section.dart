@@ -25,13 +25,13 @@ class ProjectsSection extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            SelectableText(
               'Our Projects',
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
-            Text(
+            SelectableText(
               'Here are some of the projects we have successfully completed.',
               style: Theme.of(context).textTheme.titleMedium,
               textAlign: TextAlign.center,

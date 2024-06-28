@@ -10,7 +10,7 @@ class FooterSection extends StatelessWidget {
       width: double.infinity,
       padding: const EdgeInsets.all(16.0),
       color: backgroundColor,
-      child: Text(
+      child: SelectableText(
         '© 2024 Astral Hive Solutions. All rights reserved.',
         style: Theme.of(context).textTheme.bodyMedium,
         textAlign: TextAlign.center,

@@ -8,7 +8,7 @@ fi
 
 # Define paths
 BUILD_DIR="build/web"
-TARGET_DIR="/home/asad/Projects/astralhive_website/prod"
+TARGET_DIR="/mnt/crucial_nvme/Projects/astralhive_website/prod"
 
 # Build the Flutter web app with no tree shake icons
 flutter build web --release --no-tree-shake-icons
@@ -22,23 +22,29 @@ if [ $? -eq 0 ]; then
     mkdir -p "$TARGET_DIR"
   fi
 
-  # Remove existing contents in the target directory
-  rm -rf $TARGET_DIR/*
+  # Remove existing contents in the target directory except CNAME
+  find $TARGET_DIR -type f ! -name 'CNAME' -delete
+  find $TARGET_DIR -type d ! -name '.' ! -name 'assets' ! -name 'canvaskit' -exec rm -rf {} +
 
   # Move the contents of build/web/ to the production directory
-  mv $BUILD_DIR/* $TARGET_DIR/
+  cp -r $BUILD_DIR/* $TARGET_DIR/
 
   echo "Files moved to $TARGET_DIR."
 
   # Change to the target directory
   cd $TARGET_DIR
 
-  # Commit the changes to the repository
-  git add .
-  git commit -m "$1"
-  git push
+  # Check if the target directory is a git repository
+  if [ -d ".git" ]; then
+    # Commit the changes to the repository
+    git add .
+    git commit -m "$1"
+    git push
 
-  echo "Changes committed and pushed to the repository."
+    echo "Changes committed and pushed to the repository."
+  else
+    echo "Not a git repository. Skipping git operations."
+  fi
 else
   echo "Build failed. Exiting."
   exit 1

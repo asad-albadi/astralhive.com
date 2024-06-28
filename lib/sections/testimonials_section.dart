@@ -30,13 +30,13 @@ class TestimonialsSection extends StatelessWidget {
           return Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
+              SelectableText(
                 'Testimonials',
                 style: Theme.of(context).textTheme.headlineSmall,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
-              Text(
+              SelectableText(
                 'Here’s what our clients have to say about us.',
                 style: Theme.of(context).textTheme.titleMedium,
                 textAlign: TextAlign.center,

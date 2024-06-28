@@ -10,13 +10,13 @@ class ContactSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        SelectableText(
           'Contact Us',
           style: Theme.of(context).textTheme.headlineSmall,
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 8),
-        Text(
+        SelectableText(
           'We would love to hear from you. Connect with us on social media!',
           style: Theme.of(context).textTheme.titleMedium,
           textAlign: TextAlign.center,

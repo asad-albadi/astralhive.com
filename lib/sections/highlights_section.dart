@@ -25,14 +25,14 @@ class HighlightsSection extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            SelectableText(
               'Our Highlights',
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
-            Text(
-              'Proud of a portfolio of successful projects crafted with the highest standards of quality and performance. From enterprise-level applications to consumer-facing apps, covering a wide range of industries and use cases. Astral Hive Solutions offers the benefits of direct communication, agile development, and a deep commitment to project success.',
+            SelectableText(
+              'The portfolio features successful projects crafted with the highest standards of quality and performance, spanning various industries and use cases. Benefits include direct communication, agile development, and a strong commitment to project success.',
               style: TextStyle(
                 fontSize: constraints.maxWidth > 600 ? 18 : 16,
                 color: foregroundColor,

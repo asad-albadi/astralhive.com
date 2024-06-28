@@ -12,14 +12,14 @@ class IntroSection extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
+            SelectableText(
               'About Us',
               style: Theme.of(context).textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 8),
-            Text(
-              'Astral Hive Solutions combines the expertise and dedication of a solo developer with the professionalism and reliability of a full-scale tech company. Committed to delivering high-quality, innovative, and reliable digital products tailored to client needs, with extensive experience in developing high-performance applications for Windows, Linux, Android, and the web. Each project receives personalized attention and care.',
+            SelectableText(
+              'Astral Hive delivers high-quality, innovative, and reliable digital products tailored to client needs. Extensive experience ensures each project receives personalized attention and care.',
               style: TextStyle(
                 fontSize: fontSize,
                 color: foregroundColor,
