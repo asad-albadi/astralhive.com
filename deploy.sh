@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Check if commit message is provided
 if [ -z "$1" ]; then
@@ -9,6 +10,7 @@ fi
 # Define paths
 BUILD_DIR="build/web"
 TARGET_DIR="/mnt/crucial_nvme/Projects/astralhive_website/prod"
+CNAME_FILE="${TARGET_DIR}/CNAME"
 
 # Build the Flutter web app with no tree shake icons
 flutter build web --release --no-tree-shake-icons
@@ -17,12 +19,21 @@ flutter build web --release --no-tree-shake-icons
 if [ $? -eq 0 ]; then
   echo "Build successful. Moving files to production directory."
 
-  # Remove existing contents in the target directory except CNAME
-  find $TARGET_DIR -type f ! -name 'CNAME' -delete
-  find $TARGET_DIR -type d ! -name '.' ! -name 'assets' ! -name 'canvaskit' -exec rm -rf {} +
+  # Retain CNAME file
+  if [ -f "$CNAME_FILE" ]; then
+    mv "$CNAME_FILE" /tmp/CNAME_backup
+  fi
 
+  # Remove existing files in the destination directory
+  rm -rf ${TARGET_DIR}/*
+  
+  # Move the CNAME file back
+  if [ -f /tmp/CNAME_backup ]; then
+    mv /tmp/CNAME_backup "$CNAME_FILE"
+  fi
+  
   # Move the contents of build/web/ to the production directory
-  cp -r $BUILD_DIR/* $TARGET_DIR/
+  mv ${BUILD_DIR}/* ${TARGET_DIR}/
 
   echo "Files moved to $TARGET_DIR."
 
