@@ -37,7 +37,7 @@ export function Hero() {
             <dd>Platforms shipped to</dd>
           </div>
           <div>
-            <dt>5</dt>
+            <dt>7</dt>
             <dd>Products in the lineup</dd>
           </div>
           <div>

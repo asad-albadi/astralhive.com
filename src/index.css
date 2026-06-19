@@ -475,6 +475,14 @@ section {
   background: #ffffff0d;
   border: 1px solid var(--border);
 }
+.card--project__logo--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent));
+  color: #0a0a12;
+  flex-shrink: 0;
+}
 .badge {
   font-size: 0.7rem;
   font-family: var(--font-mono);

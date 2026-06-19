@@ -26,7 +26,13 @@ export function Projects() {
             <span className="card__bar" aria-hidden="true" />
             <div className="card--project__top">
               <div className="card--project__title">
-                {p.image && <img className="card--project__logo" src={p.image} alt="" loading="lazy" />}
+                {p.image ? (
+                  <img className="card--project__logo" src={p.image} alt="" loading="lazy" />
+                ) : p.icon ? (
+                  <span className="card--project__logo card--project__logo--icon">
+                    <p.icon size={20} />
+                  </span>
+                ) : null}
                 <h3>{p.name}</h3>
               </div>
               {p.badge && <span className="badge">{p.badge}</span>}
