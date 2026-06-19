@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astralhive.com/sitemap.xml
+Sitemap: https://astralhive.net/sitemap.xml

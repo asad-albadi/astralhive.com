@@ -30,7 +30,7 @@ src/
   hooks/useReveal.ts    # scroll-reveal animations
   components/           # Nav, Hero, Services, Projects, About, Contact, Footer, Logo
 public/
-  CNAME                 # custom domain (astralhive.com)
+  CNAME                 # custom domain (astralhive.net)
   favicon.png, icons/   # site icons
 ```
 
