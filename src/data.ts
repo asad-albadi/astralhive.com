@@ -60,6 +60,8 @@ export const highlights: Highlight[] = [
 ]
 
 import astralcalcLogo from './assets/astralcalc_logo.png'
+import queuewingLogo from './assets/queuewing-logo.svg'
+import lifebinderLogo from './assets/lifebinder-logo.svg'
 
 export type Project = {
   name: string
@@ -83,6 +85,7 @@ export const projects: Project[] = [
     cta: 'Visit queuewing.com',
     tags: ['SaaS', 'Web', 'Real-time'],
     accent: '#0d9488, #38bdf8', // QueueWing teal → sky
+    image: queuewingLogo,
   },
   {
     name: 'LifeBinder',
@@ -94,6 +97,7 @@ export const projects: Project[] = [
     tags: ['SaaS', 'Productivity'],
     badge: 'Moving to lifebinder.me',
     accent: '#ffd23f, #7bdff2', // LifeBinder yellow → cyan
+    image: lifebinderLogo,
   },
   {
     name: 'AstralCalc',

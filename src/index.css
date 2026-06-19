@@ -283,6 +283,15 @@ section {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+  width: 100%;
+}
+/* In a centered flex column, block children size to their own max-width and
+   can overflow narrow viewports — cap them to the available width. */
+.hero__content > * {
+  max-width: 100%;
+}
+.hero__title {
+  overflow-wrap: break-word;
 }
 .hero__logo {
   width: 84px;
@@ -296,7 +305,7 @@ section {
   letter-spacing: -0.03em;
 }
 .hero__lead {
-  max-width: 620px;
+  max-width: min(620px, 100%);
   color: var(--muted);
   font-size: clamp(1.02rem, 2vw, 1.2rem);
 }
@@ -456,10 +465,11 @@ section {
   gap: 0.6rem;
 }
 .card--project__logo {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: contain;
+  padding: 4px;
   background: #ffffff0d;
   border: 1px solid var(--border);
 }

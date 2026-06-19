@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title description">
+  <title id="title">LifeBinder</title>
+  <desc id="description">A blue binder with reminder, checklist, calendar, and completion icons.</desc>
+  <rect x="15" y="8" width="84" height="112" fill="#2563eb" stroke="#050505" stroke-width="6" />
+  <path d="M15 8h84l13 13v86l-13 13H15z" fill="#3b82f6" stroke="#050505" stroke-width="6" stroke-linejoin="round" />
+  <path d="M25 18h68l9 9v74l-9 9H25z" fill="#60a5fa" opacity=".55" />
+  <path d="M94 8l18 18H94z" fill="#111827" opacity=".2" />
+  <rect x="96" y="20" width="20" height="23" fill="#ff7a1a" stroke="#050505" stroke-width="5" stroke-linejoin="round" />
+  <rect x="96" y="43" width="20" height="24" fill="#ffe03b" stroke="#050505" stroke-width="5" stroke-linejoin="round" />
+  <rect x="96" y="67" width="20" height="24" fill="#10b981" stroke="#050505" stroke-width="5" stroke-linejoin="round" />
+  <rect x="96" y="91" width="20" height="24" fill="#a855f7" stroke="#050505" stroke-width="5" stroke-linejoin="round" />
+  <rect x="35" y="28" width="57" height="72" rx="3" fill="#fffdf3" stroke="#050505" stroke-width="6" />
+  <rect x="42" y="36" width="18" height="18" rx="2" fill="#ffdd00" stroke="#050505" stroke-width="3" />
+  <path d="M51 40v11m-5 0h10" stroke="#050505" stroke-width="4" stroke-linecap="round" />
+  <rect x="67" y="36" width="18" height="18" rx="2" fill="#f9a8d4" stroke="#050505" stroke-width="3" />
+  <path d="M72 42h8m-8 6h8" stroke="#050505" stroke-width="4" stroke-linecap="round" />
+  <rect x="42" y="62" width="18" height="18" rx="2" fill="#fff7ed" stroke="#050505" stroke-width="3" />
+  <path d="M46 58v8m10-8v8M45 70h12M45 76h12" stroke="#050505" stroke-width="3" stroke-linecap="round" />
+  <rect x="67" y="62" width="18" height="18" rx="2" fill="#10b981" stroke="#050505" stroke-width="3" />
+  <path d="M71 71l4 5 8-11" fill="none" stroke="#050505" stroke-width="5" stroke-linecap="square" stroke-linejoin="round" />
+  <path d="M43 91h39" stroke="#050505" stroke-width="5" stroke-linecap="round" />
+  <circle cx="43" cy="91" r="6" fill="#050505" />
+  <circle cx="82" cy="91" r="6" fill="#050505" />
+  <path d="M10 38h18M10 81h18" stroke="#050505" stroke-width="13" stroke-linecap="round" />
+  <path d="M10 38h18M10 81h18" stroke="#fffdf3" stroke-width="5" stroke-linecap="round" />
+</svg>
