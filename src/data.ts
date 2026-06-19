@@ -59,6 +59,8 @@ export const highlights: Highlight[] = [
   },
 ]
 
+import astralcalcLogo from './assets/astralcalc_logo.png'
+
 export type Project = {
   name: string
   tagline: string
@@ -67,7 +69,8 @@ export type Project = {
   cta: string
   tags: string[]
   badge?: string
-  accent: string // gradient stops for the project card
+  accent: string // gradient stops for the project card, taken from each brand
+  image?: string
 }
 
 export const projects: Project[] = [
@@ -79,18 +82,18 @@ export const projects: Project[] = [
     href: 'https://queuewing.com/',
     cta: 'Visit queuewing.com',
     tags: ['SaaS', 'Web', 'Real-time'],
-    accent: '#8b5cf6, #22d3ee',
+    accent: '#0d9488, #38bdf8', // QueueWing teal → sky
   },
   {
     name: 'LifeBinder',
     tagline: 'Your life, organized in one place',
     description:
-      'Self-hosted workspace that brings tasks, agenda, Vault knowledge, workspaces, and notifications together — your data, your server.',
+      'One place for your tasks, agenda, Vault knowledge, workspaces, and notifications — everything that runs your day, finally together.',
     href: 'https://lifebinder.astralhive.net/',
     cta: 'Visit LifeBinder',
-    tags: ['Self-hosted', 'Productivity'],
+    tags: ['SaaS', 'Productivity'],
     badge: 'Moving to lifebinder.me',
-    accent: '#50fa7b, #22d3ee',
+    accent: '#ffd23f, #7bdff2', // LifeBinder yellow → cyan
   },
   {
     name: 'AstralCalc',
@@ -100,7 +103,8 @@ export const projects: Project[] = [
     href: 'https://play.google.com/store/apps/details?id=com.ahs.astralcalc',
     cta: 'Get it on Google Play',
     tags: ['Android', 'Utility'],
-    accent: '#ffb86c, #ff5555',
+    accent: '#8b5cf6, #22d3ee', // house gradient
+    image: astralcalcLogo,
   },
 ]
 

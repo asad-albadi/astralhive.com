@@ -29,3 +29,6 @@ bun-debug.log*
 
 # Misc
 *.pyc
+
+# TypeScript build info
+*.tsbuildinfo

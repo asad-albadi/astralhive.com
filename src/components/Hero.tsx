@@ -1,10 +1,12 @@
 import { ArrowRight, Sparkles } from 'lucide-react'
+import { Logo } from './Logo'
 
 export function Hero() {
   return (
     <section className="hero" id="top">
       <div className="hero__glow" aria-hidden="true" />
       <div className="hero__content" data-reveal>
+        <Logo className="hero__logo" />
         <span className="pill">
           <Sparkles size={14} /> Solo studio · full-scale craft
         </span>
