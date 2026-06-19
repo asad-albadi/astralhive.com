@@ -1,60 +1,52 @@
-#!/bin/bash
-set -e
+#!/usr/bin/env bash
+#
+# Build the site and publish dist/ to the `prod` branch (served by GitHub Pages).
+# Usage: ./deploy.sh "commit message"
+#
+set -euo pipefail
 
-# Check if commit message is provided
-if [ -z "$1" ]; then
-  echo "Usage: $0 <commit-message>"
+MSG="${1:-deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)}"
+BRANCH="prod"
+DIST="dist"
+WORKTREE=".deploy-prod"
+
+# 1. Build
+echo "▶ Building…"
+bun install
+bun run build
+
+if [ ! -f "$DIST/CNAME" ]; then
+  echo "✖ $DIST/CNAME missing — aborting (custom domain would break)."
   exit 1
 fi
 
-# Define paths
-BUILD_DIR="build/web"
-TARGET_DIR="/mnt/crucial_nvme/Projects/astralhive_website/prod"
-CNAME_FILE="${TARGET_DIR}/CNAME"
+# 2. Prepare a worktree checked out on the prod branch
+echo "▶ Preparing $BRANCH worktree…"
+git worktree remove --force "$WORKTREE" 2>/dev/null || true
+rm -rf "$WORKTREE"
 
-# Build the Flutter web app with no tree shake icons
-flutter build web --release --no-tree-shake-icons
-
-# Check if the build was successful
-if [ $? -eq 0 ]; then
-  echo "Build successful. Moving files to production directory."
-
-  # Retain CNAME file
-  if [ -f "$CNAME_FILE" ]; then
-    mv "$CNAME_FILE" /tmp/CNAME_backup
-  fi
-
-  # Remove existing files in the destination directory
-  rm -rf ${TARGET_DIR}/*
-  
-  # Move the CNAME file back
-  if [ -f /tmp/CNAME_backup ]; then
-    mv /tmp/CNAME_backup "$CNAME_FILE"
-  fi
-  
-  # Move the contents of build/web/ to the production directory
-  mv ${BUILD_DIR}/* ${TARGET_DIR}/
-
-  echo "Files moved to $TARGET_DIR."
-
-  # Change to the target directory
-  cd $TARGET_DIR
-
-  # Check if the target directory is a git repository
-  if [ -d ".git" ]; then
-    # Switch to the prod branch
-    git checkout prod
-
-    # Commit the changes to the repository
-    git add .
-    git commit -m "$1"
-    git push origin prod
-
-    echo "Changes committed and pushed to the repository."
-  else
-    echo "Not a git repository. Skipping git operations."
-  fi
+if git show-ref --quiet "refs/heads/$BRANCH"; then
+  git worktree add "$WORKTREE" "$BRANCH"
 else
-  echo "Build failed. Exiting."
-  exit 1
+  git worktree add --orphan -b "$BRANCH" "$WORKTREE"
 fi
+
+# 3. Replace its contents with the fresh build
+echo "▶ Syncing build output…"
+find "$WORKTREE" -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+cp -R "$DIST"/. "$WORKTREE"/
+
+# 4. Commit & push
+echo "▶ Publishing…"
+git -C "$WORKTREE" add -A
+if git -C "$WORKTREE" diff --cached --quiet; then
+  echo "✓ Nothing changed — skipping commit."
+else
+  git -C "$WORKTREE" commit -m "$MSG"
+  git -C "$WORKTREE" push origin "$BRANCH"
+  echo "✓ Pushed to $BRANCH."
+fi
+
+# 5. Clean up
+git worktree remove --force "$WORKTREE"
+echo "✓ Done."

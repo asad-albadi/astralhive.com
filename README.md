@@ -1,43 +1,48 @@
-# Astral Hive Solutions Website
+# Astral Hive — Website
 
-Welcome to the official website of Astral Hive Solutions! This site showcases the diverse range of digital solutions we offer, including application development for Windows, Linux, Android, and the web. Our focus is on delivering high-quality, innovative, and reliable digital products tailored to meet the unique needs of our clients.
+The official website for Astral Hive Solutions. Built with **Bun + Vite + React + TypeScript**, deployed to **GitHub Pages** on a custom domain.
 
-## About Astral Hive Solutions
+## Stack
 
-Astral Hive Solutions combines the expertise and dedication of a solo developer with the professionalism and reliability of a full-scale tech company. Committed to delivering high-performance applications, we take pride in our portfolio of successful projects crafted with the highest standards of quality and performance.
+- [Bun](https://bun.sh) — package manager / runtime
+- [Vite](https://vite.dev) + [React](https://react.dev) + TypeScript
+- [lucide-react](https://lucide.dev) — icons
+- Plain CSS with custom properties (`src/index.css`) — no UI framework
 
-## Highlights
+## Develop
 
-- **Security**: Top-notch security measures in every project.
-- **Performance**: Optimized for maximum performance.
-- **Support**: 24/7 support for all our clients.
+```bash
+bun install
+bun run dev        # local dev server
+bun run build      # type-check + production build -> dist/
+bun run preview    # preview the production build
+```
 
-## Services
+## Project structure
 
-We offer a wide range of services to meet your digital needs:
+```
+index.html              # entry HTML + SEO/OG meta
+src/
+  main.tsx              # React bootstrap
+  App.tsx               # page composition
+  index.css             # design system + all styles
+  data.ts               # services, highlights, projects, links (edit content here)
+  hooks/useReveal.ts    # scroll-reveal animations
+  components/           # Nav, Hero, Services, Projects, About, Contact, Footer, Logo
+public/
+  CNAME                 # custom domain (astralhive.com)
+  favicon.png, icons/   # site icons
+```
 
-- **Windows Apps**: High-performance desktop applications.
-- **Linux Apps**: Robust and reliable applications for Linux.
-- **Android Apps**: Innovative and user-friendly mobile applications.
-- **Web Apps**: Modern and responsive web applications.
-- **Automation**: Streamline your processes with custom automation solutions.
-- **Comprehensive Systems**: Solutions for PoS, management systems, and other integrated services.
-- **APIs**: Robust and scalable API solutions for your applications.
+To add or edit a project / service, edit `src/data.ts` — no component changes needed.
 
-## Projects
+## Deploy
 
-Check out some of our successfully completed projects:
+GitHub Pages serves the `prod` branch. The deploy script builds and publishes `dist/`:
 
-- **AstralCalc**: A comprehensive calculation and conversion app.
+```bash
+./deploy.sh "your commit message"
+```
 
-## Contact Us
-
-We would love to hear from you. Connect with us on social media!
-
-- **Instagram**
-- **WhatsApp**
-- **Twitter**
-
----
-
-Thank you for visiting our website. Stay tuned for more updates and new projects!
+It uses a git worktree to push the build output to `prod`, keeping the `CNAME`
+file so the custom domain stays mapped.
