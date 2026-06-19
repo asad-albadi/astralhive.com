@@ -62,6 +62,8 @@ export const highlights: Highlight[] = [
 import astralcalcLogo from './assets/astralcalc_logo.png'
 import queuewingLogo from './assets/queuewing-logo.svg'
 import lifebinderLogo from './assets/lifebinder-logo.svg'
+import gymlogLogo from './assets/gymlog_logo.png'
+import bumpsyncLogo from './assets/bumpsync_logo.png'
 
 export type Project = {
   name: string
@@ -109,6 +111,29 @@ export const projects: Project[] = [
     tags: ['Android', 'Utility'],
     accent: '#8b5cf6, #22d3ee', // house gradient
     image: astralcalcLogo,
+  },
+  {
+    name: 'GymLog',
+    tagline: 'Track every workout',
+    description:
+      'A comprehensive workout tracker for Android — log your sessions, monitor progress, and analyze your gym activity over time.',
+    href: 'https://play.google.com/store/apps/details?id=com.ahs.gymlog',
+    cta: 'Get it on Google Play',
+    tags: ['Android', 'Fitness'],
+    accent: '#7c3aed, #ec4899', // GymLog purple → pink
+    image: gymlogLogo,
+  },
+  {
+    name: 'BumpSync',
+    tagline: 'Your pregnancy companion',
+    description:
+      'A pregnancy tracking app designed to support expecting parents through every stage of the journey.',
+    href: 'https://play.google.com/store/apps/details?id=com.ahs.bumpsync',
+    cta: 'Get it on Google Play',
+    tags: ['Android', 'Health'],
+    badge: 'Coming soon',
+    accent: '#f472b6, #67e8f9', // BumpSync pink → cyan
+    image: bumpsyncLogo,
   },
 ]
 
