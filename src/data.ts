@@ -114,4 +114,5 @@ export const projects: Project[] = [
 
 export const social = {
   linktree: 'https://linktr.ee/astralhive',
+  portfolio: 'https://asadalbadi.dev/',
 }

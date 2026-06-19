@@ -1,3 +1,6 @@
+import { ArrowUpRight } from 'lucide-react'
+import { social } from '../data'
+
 export function About() {
   return (
     <section className="section" id="about">
@@ -14,6 +17,14 @@ export function About() {
             The approach is simple: ship high-quality, dependable software, communicate
             directly, and stay accountable for the result.
           </p>
+          <a
+            className="btn btn--ghost about__portfolio"
+            href={social.portfolio}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            See the developer's portfolio <ArrowUpRight size={16} />
+          </a>
         </div>
         <ul className="about__principles">
           <li>

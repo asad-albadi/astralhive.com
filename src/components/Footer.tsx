@@ -14,6 +14,9 @@ export function Footer() {
           <a href="#services">Services</a>
           <a href="#work">Work</a>
           <a href="#about">About</a>
+          <a href={social.portfolio} target="_blank" rel="noopener noreferrer">
+            Portfolio
+          </a>
           <a href={social.linktree} target="_blank" rel="noopener noreferrer">
             Links
           </a>
