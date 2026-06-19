@@ -20,13 +20,15 @@ if [ ! -f "$DIST/CNAME" ]; then
   exit 1
 fi
 
-# 2. Prepare a worktree checked out on the prod branch
+# 2. Prepare a worktree on the prod branch, continuing the remote's history so
+#    the push fast-forwards (prod only ever holds built output).
 echo "▶ Preparing $BRANCH worktree…"
 git worktree remove --force "$WORKTREE" 2>/dev/null || true
 rm -rf "$WORKTREE"
+git fetch origin "$BRANCH" 2>/dev/null || true
 
-if git show-ref --quiet "refs/heads/$BRANCH"; then
-  git worktree add "$WORKTREE" "$BRANCH"
+if git show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
+  git worktree add -B "$BRANCH" "$WORKTREE" "origin/$BRANCH"
 else
   git worktree add --orphan -b "$BRANCH" "$WORKTREE"
 fi
