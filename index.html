@@ -1,59 +1,79 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08080f" />
+    <meta name="apple-mobile-web-app-title" content="Astral Hive" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <title>Astral Hive — Software, Apps & Automation</title>
+    <meta
+      name="description"
+      content="Astral Hive builds high-performance cross-platform apps, automation, and comprehensive systems for Windows, Linux, Android, and the web."
+    />
+    <meta
+      name="keywords"
+      content="Astral Hive, software development, cross-platform apps, automation, Rust, Flutter, Android apps, QueueWing, LifeBinder, AstralCalc, Oman software"
+    />
+    <meta name="author" content="Asad Al Badi" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://astralhive.net/" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Astral Hive" />
+    <meta property="og:title" content="Astral Hive — Software, Apps & Automation" />
+    <meta
+      property="og:description"
+      content="High-performance cross-platform apps, automation, and comprehensive systems — crafted with care."
+    />
+    <meta property="og:url" content="https://astralhive.net/" />
+    <meta property="og:image" content="https://astralhive.net/android-chrome-512x512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="Astral Hive logo" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href=".">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Astral Hive — Software, Apps & Automation" />
+    <meta
+      name="twitter:description"
+      content="High-performance cross-platform apps, automation, and comprehensive systems — crafted with care."
+    />
+    <meta name="twitter:image" content="https://astralhive.net/android-chrome-512x512.png" />
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="astralhive_website">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Astral Hive</title>
-  <link rel="manifest" href="manifest.json">
-
-  <script>
-    // The value below is injected by flutter build, do not touch.
-    const flutter_service_worker_version = null;
-  </script>
-  <!-- This script adds the flutter initialization JS code -->
-  <script src="flutter.js" defer></script>
-</head>
-<body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          flutter_service_worker_version: flutter_service_worker_version,
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Astral Hive",
+        "alternateName": "Astral Hive Solutions",
+        "url": "https://astralhive.net/",
+        "logo": "https://astralhive.net/android-chrome-512x512.png",
+        "description": "Astral Hive builds high-performance cross-platform apps, automation, and comprehensive systems for Windows, Linux, Android, and the web.",
+        "founder": {
+          "@type": "Person",
+          "name": "Asad Al Badi",
+          "url": "https://asadalbadi.dev/"
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
-    });
-  </script>
-</body>
+        "sameAs": [
+          "https://github.com/asad-albadi",
+          "https://www.instagram.com/astralhive/",
+          "https://linktr.ee/astralhive",
+          "https://ko-fi.com/astralhive"
+        ]
+      }
+    </script>
+    <script type="module" crossorigin src="/assets/index-CZ9nfA80.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CCYAyXdl.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
