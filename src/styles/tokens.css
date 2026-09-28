@@ -1,0 +1,65 @@
+@import '../../brand/tokens/astral-hive.css';
+
+/* Root brand boards are authoritative. These canonical palette values match
+   brand_assets.png; the interface roles below derive from that palette. */
+:root {
+  --color-ink: var(--ah-color-navy);
+  --color-paper: var(--ah-color-white);
+  --color-accent: var(--ah-color-indigo);
+  --color-highlight: var(--ah-color-violet);
+  --color-muted: color-mix(in srgb, var(--color-ink) 68%, var(--color-paper));
+  --color-line: var(--ah-color-light-gray);
+  --color-tint: color-mix(in srgb, var(--color-ink) 2.5%, var(--color-paper));
+  --color-lilac: color-mix(
+    in srgb,
+    var(--color-highlight) 7%,
+    var(--color-paper)
+  );
+  --color-on-dark: var(--ah-color-white);
+  --color-muted-on-dark: color-mix(
+    in srgb,
+    var(--color-ink) 22%,
+    var(--color-paper)
+  );
+  --font-body: var(--ah-font-primary);
+  --text-xs: 0.6875rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-heading: clamp(2rem, 3.35vw, 2.875rem);
+  --text-display: clamp(3rem, 5.35vw, 4.625rem);
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --section-space: clamp(4rem, 7.5vw, 7rem);
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --container: 78rem;
+  --radius-small: var(--ah-radius-sm);
+  --radius-medium: var(--ah-radius-md);
+  --radius-large: var(--ah-radius-lg);
+  --shadow-card: 0 12px 32px
+    color-mix(in srgb, var(--color-ink) 7%, transparent);
+  --focus-ring: 0 0 0 3px var(--color-paper), 0 0 0 5px var(--color-accent);
+  --duration-fast: 160ms;
+  --duration-normal: 260ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --nav-height: 6rem;
+  --pattern-opacity: 0.28;
+  --parallax-overscan: 28px;
+}
+/* Responsive boundaries: 40rem (phone), 60rem (navigation/tablet),
+   75rem (desktop). Media queries use literals because CSS variables are
+   not supported in media conditions. Nav's matchMedia follows 60rem. */

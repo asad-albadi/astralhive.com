@@ -1,50 +1,69 @@
-import { ArrowRight, Sparkles } from 'lucide-react'
-import { Logo } from './Logo'
+import { ButtonLink } from './ButtonLink'
+import { StudioPreview } from './StudioPreview'
+import { projects } from '../data'
 
 export function Hero() {
   return (
-    <section className="hero" id="top">
-      <div className="hero__glow" aria-hidden="true" />
-      <div className="hero__content" data-reveal>
-        <Logo className="hero__logo" />
-        <span className="pill">
-          <Sparkles size={14} /> Solo studio · full-scale craft
-        </span>
-
-        <h1 className="hero__title">
-          Software that feels
-          <br />
-          <span className="grad-text">effortless to use.</span>
-        </h1>
-
-        <p className="hero__lead">
-          Astral Hive builds high-performance cross-platform apps, automation, and
-          comprehensive systems — for Windows, Linux, Android, and the web.
-        </p>
-
-        <div className="hero__actions">
-          <a className="btn btn--primary" href="#work">
-            See the work <ArrowRight size={18} />
-          </a>
-          <a className="btn btn--ghost" href="#contact">
-            Start a project
-          </a>
+    <section className="hero" id="top" aria-labelledby="hero-title">
+      <div className="container">
+        <div className="hero__layout">
+          <div className="hero__content">
+            <p className="eyebrow">
+              <span className="status-dot" /> Independent software studio
+            </p>
+            <h1 id="hero-title">
+              Software built
+              <br />
+              for the way
+              <br />
+              <span>you work.</span>
+            </h1>
+            <p className="hero__lead">
+              Thoughtful apps. Connected systems. Less busywork.
+              <br className="desktop-break" /> We turn complex challenges into
+              software that makes everyday work feel simple.
+            </p>
+            <div className="actions">
+              <ButtonLink href="#contact">Start a conversation</ButtonLink>
+              <ButtonLink href="#work" variant="text">
+                Explore our work
+              </ButtonLink>
+            </div>
+            <p className="hero__note">
+              One dedicated builder. From first idea to what’s next.
+            </p>
+          </div>
+          <StudioPreview />
         </div>
-
-        <dl className="hero__stats">
-          <div>
-            <dt>4</dt>
-            <dd>Platforms shipped to</dd>
-          </div>
-          <div>
-            <dt>7</dt>
-            <dd>Products in the lineup</dd>
-          </div>
-          <div>
-            <dt>1:1</dt>
-            <dd>Work directly with the builder</dd>
-          </div>
-        </dl>
+        <div className="hero__foot">
+          <p>Built to fit your world.</p>
+          <dl className="hero__facts">
+            <div>
+              <dt>04</dt>
+              <dd>
+                Platforms
+                <br />
+                <span>Web · Android · Windows · Linux</span>
+              </dd>
+            </div>
+            <div>
+              <dt>{String(projects.length).padStart(2, '0')}</dt>
+              <dd>
+                Products
+                <br />
+                <span>From everyday tools to SaaS</span>
+              </dd>
+            </div>
+            <div>
+              <dt>1:1</dt>
+              <dd>
+                Collaboration
+                <br />
+                <span>Direct access to the builder</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
   )

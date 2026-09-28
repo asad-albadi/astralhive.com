@@ -3,12 +3,15 @@
   "private": true,
   "version": "2.0.0",
   "type": "module",
-  "description": "Astral Hive Solutions — official website",
+  "description": "Astral Hive Solutions \u2014 official website",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "npm run brand:sync && vite",
+    "build": "npm run brand:sync && tsc -b && vite build",
     "preview": "vite preview",
-    "deploy": "bash deploy.sh"
+    "deploy": "bash deploy.sh",
+    "brand:sync": "node scripts/sync-brand.mjs",
+    "test": "node --test test/*.test.mjs",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "lucide-react": "^0.460.0",
@@ -16,9 +19,12 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
+    "sharp": "^0.35.5",
     "typescript": "^5.6.3",
     "vite": "^6.0.3"
   }

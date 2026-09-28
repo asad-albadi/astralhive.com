@@ -13,24 +13,28 @@ export type Service = {
   icon: LucideIcon
   title: string
   description: string
+  detail: string
 }
 
 export const services: Service[] = [
   {
     icon: Code2,
-    title: 'Cross-Platform Apps',
+    title: 'Apps that go with you',
+    detail: 'Web · Android · Windows · Linux',
     description:
       'High-performance applications for Windows, Linux, Android, and the web — one codebase, native feel.',
   },
   {
     icon: Cog,
-    title: 'Automation',
+    title: 'Make room for better work',
+    detail: 'Workflows · Automation · Integrations',
     description:
       'Custom automation that removes repetitive work and connects the tools your business already runs on.',
   },
   {
     icon: Network,
-    title: 'Comprehensive Systems',
+    title: 'Connect the whole picture',
+    detail: 'Custom platforms · APIs · Systems',
     description:
       'End-to-end builds: point-of-sale, management platforms, APIs, and integrated back-office systems.',
   },
@@ -46,17 +50,20 @@ export const highlights: Highlight[] = [
   {
     icon: ShieldCheck,
     title: 'Security first',
-    description: 'Sensible defaults and hardened practices baked into every project.',
+    description:
+      'Sensible defaults and hardened practices baked into every project.',
   },
   {
     icon: Gauge,
     title: 'Built for speed',
-    description: 'Optimized for fast load, low resource use, and a snappy experience.',
+    description:
+      'Optimized for fast load, low resource use, and a snappy experience.',
   },
   {
     icon: LifeBuoy,
     title: 'Direct support',
-    description: 'Talk straight to the person who built it — no ticket queues, no runaround.',
+    description:
+      'Talk straight to the person who built it — no ticket queues, no runaround.',
   },
 ]
 
@@ -75,7 +82,7 @@ export type Project = {
   cta: string
   tags: string[]
   badge?: string
-  accent: string // gradient stops for the project card, taken from each brand
+  imageSurface?: 'dark'
   image?: string
   icon?: LucideIcon // fallback mark when a project has no logo image
 }
@@ -89,7 +96,6 @@ export const projects: Project[] = [
     href: 'https://queuewing.com/',
     cta: 'Visit queuewing.com',
     tags: ['SaaS', 'Web', 'Real-time'],
-    accent: '#0d9488, #38bdf8', // QueueWing teal → sky
     image: queuewingLogo,
   },
   {
@@ -101,7 +107,6 @@ export const projects: Project[] = [
     cta: 'Visit LifeBinder',
     tags: ['SaaS', 'Productivity'],
     badge: 'Moving to lifebinder.me',
-    accent: '#ffd23f, #7bdff2', // LifeBinder yellow → cyan
     image: lifebinderLogo,
   },
   {
@@ -112,8 +117,8 @@ export const projects: Project[] = [
     href: 'https://play.google.com/store/apps/details?id=com.ahs.astralcalc',
     cta: 'Get it on Google Play',
     tags: ['Android', 'Utility'],
-    accent: '#8b5cf6, #22d3ee', // house gradient
     image: astralcalcLogo,
+    imageSurface: 'dark',
   },
   {
     name: 'GymLog',
@@ -123,7 +128,6 @@ export const projects: Project[] = [
     href: 'https://play.google.com/store/apps/details?id=com.ahs.gymlog',
     cta: 'Get it on Google Play',
     tags: ['Android', 'Fitness'],
-    accent: '#7c3aed, #ec4899', // GymLog purple → pink
     image: gymlogLogo,
   },
   {
@@ -135,7 +139,6 @@ export const projects: Project[] = [
     cta: 'Get it on Google Play',
     tags: ['Android', 'Health'],
     badge: 'Coming soon',
-    accent: '#f472b6, #67e8f9', // BumpSync pink → cyan
     image: bumpsyncLogo,
   },
   {
@@ -146,7 +149,6 @@ export const projects: Project[] = [
     href: 'https://github.com/asad-albadi/LibraPix',
     cta: 'View on GitHub',
     tags: ['Desktop', 'Rust', 'Open source'],
-    accent: '#2563eb, #38bdf8', // LibraPix blue → sky
     image: librapixLogo,
   },
   {
@@ -157,7 +159,6 @@ export const projects: Project[] = [
     href: 'https://github.com/asad-albadi/streamdock-n3',
     cta: 'View on GitHub',
     tags: ['Linux', 'Python', 'Open source'],
-    accent: '#10b981, #38bdf8', // emerald → sky
     icon: LayoutGrid,
   },
 ]
@@ -166,3 +167,28 @@ export const social = {
   linktree: 'https://linktr.ee/astralhive',
   portfolio: 'https://asadalbadi.dev/',
 }
+
+export const navigation = [
+  { href: '#services', label: 'Services' },
+  { href: '#work', label: 'Work' },
+  { href: '#about', label: 'About' },
+  { href: '#contact', label: 'Contact' },
+]
+
+export const principles = [
+  {
+    title: 'A direct line to the builder',
+    description:
+      'No layers between your idea and the person bringing it to life. Clear communication, honest answers, shared context.',
+  },
+  {
+    title: 'Progress you can see',
+    description:
+      'Small iterations and frequent demos keep the work grounded in what matters. We learn, refine, and move forward together.',
+  },
+  {
+    title: 'Ownership beyond launch',
+    description:
+      'Design, development, deployment, and ongoing care. One point of responsibility for the whole journey.',
+  },
+]

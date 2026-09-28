@@ -1,33 +1,31 @@
-import { ArrowUpRight, MessageCircle } from 'lucide-react'
+import { ButtonLink } from './ButtonLink'
 import { social } from '../data'
 
 export function Contact() {
   return (
-    <section className="section" id="contact">
-      <div className="cta" data-reveal>
-        <div className="cta__glow" aria-hidden="true" />
-        <h2>Have something to build?</h2>
-        <p>
-          Tell me about your idea, product, or process worth automating. I'll get back to
-          you with a straight answer on how to make it real.
-        </p>
-        <div className="cta__actions">
-          <a
-            className="btn btn--primary"
-            href={social.linktree}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageCircle size={18} /> Reach out
-          </a>
-          <a
-            className="btn btn--ghost"
-            href={social.linktree}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            All links <ArrowUpRight size={16} />
-          </a>
+    <section className="contact" id="contact">
+      <div className="container">
+        <div className="contact__panel" data-parallax>
+          <div className="contact__content">
+            <p className="eyebrow">
+              <span>04</span> Build with us
+            </p>
+            <h2>
+              Good software starts
+              <br />
+              with a conversation.
+            </h2>
+            <p>
+              A new product, a process worth simplifying, or a system that needs
+              to work better. Tell us what you have in mind.
+            </p>
+            <ButtonLink variant="light" href={social.linktree} external>
+              Let’s talk about it
+            </ButtonLink>
+            <span className="contact__note">
+              Choose your preferred way to connect on Linktree.
+            </span>
+          </div>
         </div>
       </div>
     </section>

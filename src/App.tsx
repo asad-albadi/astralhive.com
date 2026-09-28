@@ -5,15 +5,17 @@ import { Projects } from './components/Projects'
 import { About } from './components/About'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
-import { useReveal } from './hooks/useReveal'
+import { useParallax } from './hooks/useParallax'
 
 export default function App() {
-  useReveal()
-
+  useParallax()
   return (
     <>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
       <Nav />
-      <main>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Services />
         <Projects />
