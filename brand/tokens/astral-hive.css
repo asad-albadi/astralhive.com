@@ -1,0 +1,15 @@
+:root {
+  --ah-color-navy: #0B1A3B;
+  --ah-color-violet: #8B5CF6;
+  --ah-color-indigo: #6366FF;
+  --ah-color-light-gray: #E5E7EB;
+  --ah-color-off-white: #FFFFFF;
+  --ah-color-black: #000000;
+  --ah-color-white: #FFFFFF;
+  --ah-gradient-astral: linear-gradient(135deg, #6366FF 0%, #8B5CF6 100%);
+  --ah-font-primary: Montserrat, Arial, sans-serif;
+  --ah-font-alternative: "Space Grotesk", Arial, sans-serif;
+  --ah-radius-sm: 0.5rem;
+  --ah-radius-md: 0.75rem;
+  --ah-radius-lg: 1rem;
+}

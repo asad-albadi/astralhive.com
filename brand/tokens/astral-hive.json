@@ -1,0 +1,17 @@
+{
+  "color": {
+    "navy": { "value": "#0B1A3B" },
+    "violet": { "value": "#8B5CF6" },
+    "indigo": { "value": "#6366FF" },
+    "lightGray": { "value": "#E5E7EB" },
+    "offWhite": { "value": "#FFFFFF" },
+    "black": { "value": "#000000" },
+    "white": { "value": "#FFFFFF" }
+  },
+  "gradient": { "astral": { "value": "linear-gradient(135deg, #6366FF 0%, #8B5CF6 100%)" } },
+  "font": {
+    "primary": { "value": "Montserrat, Arial, sans-serif" },
+    "alternative": { "value": "Space Grotesk, Arial, sans-serif" }
+  },
+  "radius": { "sm": { "value": "8px" }, "md": { "value": "12px" }, "lg": { "value": "16px" } }
+}
