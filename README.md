@@ -1,6 +1,6 @@
 # Astral Hive — Website
 
-The Astral Hive studio website, built with React, TypeScript, Vite, plain CSS, and Lucide icons. Deployed to GitHub Pages at **astralhive.net**.
+The Astral Hive studio website, built with React, TypeScript, Vite, plain CSS, and Lucide icons. Deployed to GitHub Pages at **astralhive.om**.
 
 ## Development
 

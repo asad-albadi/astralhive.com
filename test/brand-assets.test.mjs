@@ -103,3 +103,19 @@ test('wordmark SVG exports embed the approved lockup instead of substituting its
     assert.doesNotMatch(source, /<text/);
   }
 });
+
+test('published-site metadata consistently uses the astralhive.om domain', async () => {
+  const domain = 'astralhive.om';
+  const [cname, html, robots, sitemap] = await Promise.all([
+    readFile(new URL('public/CNAME', root), 'utf8'),
+    readFile(new URL('index.html', root), 'utf8'),
+    readFile(new URL('public/robots.txt', root), 'utf8'),
+    readFile(new URL('public/sitemap.xml', root), 'utf8'),
+  ]);
+
+  assert.equal(cname.trim(), domain);
+  assert.match(html, new RegExp(`https://${domain.replace('.', '\\.')}/`));
+  assert.match(robots, new RegExp(`https://${domain.replace('.', '\\.')}/sitemap\\.xml`));
+  assert.match(sitemap, new RegExp(`https://${domain.replace('.', '\\.')}/`));
+  assert.doesNotMatch(`${cname}${html}${robots}${sitemap}`, /astralhive\.net/);
+});
