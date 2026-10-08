@@ -27,3 +27,12 @@ After changing the source monogram or this kit’s SVG generator, run:
 ```bash
 node brand/scripts/build-assets.mjs
 ```
+- `logos/astral-hive-bilingual-stacked.svg` , `astral-hive-bilingual-stacked.png`, and `astral-hive-bilingual-stacked-transparent.png` place the approved gradient monogram above the Arabic `الخلية النجمية ش.ش.و` and English `Astral Hive SPC` names. The SVG preserves the supplied raster mark and typesets the two names for flexible reuse.
+
+The regular PNG has a white background; the `-transparent.png` export preserves transparency.
+
+Rebuild these bilingual stacked lockups with:
+
+```bash
+node brand/scripts/build-bilingual-lockup.mjs
+```
