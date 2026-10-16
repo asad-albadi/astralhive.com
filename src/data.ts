@@ -91,7 +91,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     name: 'QueueWing',
-    tagline: 'Real-time queue management',
+    tagline: 'Manage queues in real time',
     description:
       'Real-time queue management with QR tickets, live displays, and multi-clerk support — turn waiting lines into smooth, trackable flows.',
     href: 'https://queuewing.com/',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
   },
   {
     name: 'LifeBinder',
-    tagline: 'Your life, organized in one place',
+    tagline: 'Keep tasks, plans, and knowledge together',
     description:
       'One place for your tasks, agenda, Vault knowledge, workspaces, and notifications — everything that runs your day, finally together.',
     href: 'https://stag.lifebinder.me/',
@@ -111,7 +111,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Doorak',
-    tagline: 'Your turn is coming. Relax.',
+    tagline: 'Give customers a calmer way to wait',
     description:
       'A calmer digital waiting experience for cafés, restaurants, food trucks, and service counters.',
     href: 'https://doorak.astralhive.om/',
