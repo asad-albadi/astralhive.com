@@ -18,7 +18,7 @@ export function StudioPreview() {
         </div>
       </div>
       <div className="studio-preview__products">
-        {projects.slice(0, 2).map((project) => (
+        {projects.slice(0, 3).map((project) => (
           <a
             className="studio-preview__product"
             key={project.name}

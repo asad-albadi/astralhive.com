@@ -73,6 +73,7 @@ import lifebinderLogo from './assets/lifebinder-logo.svg'
 import gymlogLogo from './assets/gymlog_logo.png'
 import bumpsyncLogo from './assets/bumpsync_logo.png'
 import librapixLogo from './assets/librapix_logo.png'
+import doorakLogo from './assets/doorak-logo.png'
 
 export type Project = {
   name: string
@@ -103,11 +104,20 @@ export const projects: Project[] = [
     tagline: 'Your life, organized in one place',
     description:
       'One place for your tasks, agenda, Vault knowledge, workspaces, and notifications — everything that runs your day, finally together.',
-    href: 'https://lifebinder.astralhive.net/',
+    href: 'https://stag.lifebinder.me/',
     cta: 'Visit LifeBinder',
     tags: ['SaaS', 'Productivity'],
-    badge: 'Moving to lifebinder.me',
     image: lifebinderLogo,
+  },
+  {
+    name: 'Doorak',
+    tagline: 'Your turn is coming. Relax.',
+    description:
+      'A calmer digital waiting experience for cafés, restaurants, food trucks, and service counters.',
+    href: 'https://doorak.astralhive.om/',
+    cta: 'Visit Doorak',
+    tags: ['Web', 'Queue management'],
+    image: doorakLogo,
   },
   {
     name: 'AstralCalc',
